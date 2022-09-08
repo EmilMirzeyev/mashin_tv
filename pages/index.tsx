@@ -7,8 +7,18 @@ import { useRouter } from "next/router";
 import Link from "next/link";
 import Modal from "../components/utilities/Modal";
 import { useState } from "react";
+import Search from "../components/utilities/Search"
+
 
 const Home: NextPage = () => {
+  const dummyData = [
+    { id: 1, name: 'Wade Cooper' },
+    { id: 2, name: 'Arlene Mccoy' },
+    { id: 3, name: 'Devon Webb' },
+    { id: 4, name: 'Tom Cook' },
+    { id: 5, name: 'Tanya Fox' },
+    { id: 6, name: 'Hellen Schmidt' },
+  ]
   const router = useRouter();
   const [modal, setModal] = useState(false)
 
@@ -31,6 +41,7 @@ const Home: NextPage = () => {
         <p>kldjklasd</p>
       </Modal>
       <button onClick={() => setModal(true)}>Open Modal</button>
+      <Search searchData={dummyData} />
     </Layout>
   );
 };
