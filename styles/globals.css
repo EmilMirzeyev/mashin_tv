@@ -20,6 +20,11 @@ a {
   margin: 0;
 }
 
+.big {
+  background-color: blue;
+  /* grid-row: span 2; */
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
